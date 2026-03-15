@@ -98,7 +98,11 @@ const App = {
     switch (page) {
       case 'map':
         if (SoundMap.map) {
-          setTimeout(() => SoundMap.map.resize(), 100);
+          // Must wait for the page transition (200ms) to finish so the container
+          // has a real size before Mapbox resizes. rAF ensures the browser painted.
+          setTimeout(() => requestAnimationFrame(() => {
+            SoundMap.map.resize();
+          }), 250);
         }
         break;
         
