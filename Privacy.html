@@ -1,311 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Privacy Policy & Terms of Service | MapOfSounds</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Privacy Policy and Terms of Service for MapOfSounds. Learn how we handle data and the rules for using our website." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Terms of Service — MapOfSounds</title>
+  <meta name="description" content="Privacy Policy and Terms of Service for MapOfSounds.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗺️</text></svg>">
   <style>
-    /* =========================
-   Gmarket Sans
-========================= */
-@font-face {
-  font-family: "GmarketSans";
-  font-weight: 300;
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
-    format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "GmarketSans";
-  font-weight: 500;
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-    format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "GmarketSans";
-  font-weight: 700;
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
-    format("woff");
-  font-display: swap;
-}
-
-/* =========================
-   Global
-========================= */
-* {
-  box-sizing: border-box;
-  font-family: "GmarketSans", system-ui, sans-serif;
-}
-
-body {
-  margin: 0;
-  background: #ffffff;
-  color: #333;
-  line-height: 1.7;
-  padding-top: 72px; /* 🔥 로고 공간만 확보 */
-}
-
-/* =========================
-   Logo only (transparent)
-========================= */
-.logo-link {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-
-  padding: 16px 28px;
-
-  text-decoration: none;
-  color: inherit;
-
-  background: transparent;   /* 🔥 완전 투명 */
-  border: none;
-}
-
-/* 로고 컨테이너 */
-.logo {
-  display: flex;
-  flex-direction: column; /* h1 + span 세로 */
-  cursor: pointer;
-  user-select: none;
-}
-
-/* 메인 로고 텍스트 */
-.logo h1 {
-  margin: 0;
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: #4f46e5;
-  letter-spacing: -0.02em;
-}
-
-/* 슬로건 유지 */
-.logo span {
-  font-size: 0.95rem;
-  font-weight: 300;
-  color: #64748b;
-}
-
-/* =========================
-   Content
-========================= */
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 3rem 1rem;
-}
-
-article {
-  background: #fafafa;
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
-}
-
-/* =========================
-   Responsive
-========================= */
-@media (max-width: 600px) {
-  .logo-link {
-    padding: 12px 20px;
-  }
-
-  .logo h1 {
-    font-size: 1.7rem;
-  }
-
-  .logo span {
-    font-size: 0.85rem;
-  }
-
-  body {
-    padding-top: 64px;
-  }
-}
-
-/* =========================
-   Dark Mode
-========================= */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #0f172a;
-    color: #e2e8f0;
-  }
-  
-  .logo-link {
-    background: transparent;   /* 🔥 완전 투명 */
-  }
-  
-  .logo h1 {
-    color: #818cf8;
-  }
-  
-  .logo span {
-    color: #94a3b8;
-  }
-  
-  article {
-    background: rgba(30, 41, 59, 0.8);
-    color: #e2e8f0;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.4);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #f1f5f9;
-  }
-  
-  a {
-    color: #60a5fa;
-  }
-  
-  a:hover {
-    color: #93c5fd;
-  }
-}
-
+    :root {
+      --bg: #0a0e14;
+      --bg-2: #111820;
+      --bg-3: #1a2030;
+      --text: #edf2fa;
+      --text-2: #8090a8;
+      --text-3: #506070;
+      --accent: #00d4aa;
+      --border: #1e2a3d;
+      --r: 10px;
+      --r-lg: 14px;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0f0f0f;
-      color: #eaeaea;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
-      margin: 0;
-      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      font-size: 15px;
     }
-    main {
-      max-width: 860px;
+    .container {
+      max-width: 720px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 40px 20px 80px;
     }
-    h1, h2, h3 {
-      color: #ffffff;
-      margin-top: 2.5rem;
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 24px;
     }
+    .back-link:hover { opacity: 0.8; }
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, var(--accent), #4da6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .last-updated {
+      color: var(--text-3);
+      font-size: 0.78rem;
+      margin-bottom: 32px;
     }
     h2 {
-      font-size: 1.6rem;
-      border-bottom: 1px solid #2a2a2a;
-      padding-bottom: 0.4rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      color: var(--text);
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 20px 0 8px;
+      color: var(--text);
     }
     p, li {
-      color: #cccccc;
-      font-size: 0.95rem;
+      color: var(--text-2);
+      margin-bottom: 10px;
     }
-    ul {
-      padding-left: 1.2rem;
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
     }
-    a {
-      color: #6ab0ff;
-      text-decoration: none;
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .section {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 24px;
+      margin-bottom: 16px;
     }
-    footer {
-      margin-top: 4rem;
-      font-size: 0.85rem;
-      color: #888;
+    .section h2 { margin-top: 0; }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 40px 0;
+    }
+    .footer {
+      text-align: center;
+      color: var(--text-3);
+      font-size: 0.78rem;
+      padding-top: 24px;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 24px 14px 60px; }
+      h1 { font-size: 1.5rem; }
+      .section { padding: 16px; }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to MapOfSounds</a>
 
-    <a href="/" class="logo-link">
-  <div class="logo">
-    <h1>MapOfSounds</h1>
-  </div>
-</a>
-
-  <main>
     <h1>Privacy Policy & Terms of Service</h1>
-    <p>Last updated: February 2026</p>
+    <p class="last-updated">Last updated: June 2025</p>
 
-    <!-- Privacy Policy -->
-    <h2>Privacy Policy</h2>
+    <!-- PRIVACY POLICY -->
+    <div class="section">
+      <h2>🔒 Privacy Policy</h2>
+      <p>MapOfSounds ("we", "us", "our") respects your privacy. This policy explains what information we collect, how we use it, and your rights regarding your data.</p>
 
-    <p>
-      Rukkit ("we", "our", or "us") respects your privacy.
-      This website is designed to be lightweight and accessible without requiring user accounts or personal identification.
-    </p>
+      <h3>1. Information We Collect</h3>
+      <ul>
+        <li><strong>Account Information:</strong> If you sign in with Google, we receive your name, email address, and profile picture from Google. We store this locally in your browser to keep you logged in.</li>
+        <li><strong>Uploaded Content:</strong> When you upload a sound, we collect the audio file, title, description, location coordinates, and tags you provide.</li>
+        <li><strong>Usage Data:</strong> We may collect anonymous usage data such as play counts, likes, and page views to improve the service.</li>
+        <li><strong>Comments:</strong> When you post a comment, the text and your display name are stored alongside the sound.</li>
+      </ul>
 
-    <h3>Information We Collect</h3>
-    <ul>
-      <li>We do not require registration or collect personal information such as names or email addresses.</li>
-      <li>We may collect limited non-personal data such as browser type, device information, and anonymous usage statistics.</li>
-      <li>Third-party services (such as analytics or advertising providers) may use cookies or similar technologies.</li>
-    </ul>
+      <h3>2. How We Use Your Information</h3>
+      <ul>
+        <li>To provide and operate the MapOfSounds platform.</li>
+        <li>To display your uploaded sounds on the interactive map.</li>
+        <li>To personalize your experience (favorites, play history, theme preference).</li>
+        <li>To prevent abuse and verify uploads via Cloudflare Turnstile.</li>
+        <li>To authenticate users via Google Sign-In.</li>
+      </ul>
 
-    <h3>Cookies</h3>
-    <p>
-      Cookies may be used by third-party services like Google AdSense to display relevant advertisements.
-      Users can control or disable cookies through their browser settings.
-    </p>
+      <h3>3. Data Storage</h3>
+      <ul>
+        <li><strong>Local Storage:</strong> Preferences (theme, favorites, play history, login session) are stored in your browser's localStorage. This data never leaves your device unless you upload content.</li>
+        <li><strong>Cloud Storage:</strong> Uploaded audio files are stored in Cloudflare R2. Sound metadata is stored in Cloudflare KV.</li>
+        <li><strong>No Tracking Cookies:</strong> We do not use tracking cookies or third-party analytics.</li>
+      </ul>
 
-    <h3>Third-Party Services</h3>
-    <p>
-      We may use third-party services for analytics or advertising.
-      These services have their own privacy policies and are not controlled by us.
-    </p>
+      <h3>4. Third-Party Services</h3>
+      <ul>
+        <li><strong>Google Identity Services:</strong> Used for sign-in. Subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li><strong>Cloudflare Turnstile:</strong> Used for bot protection on uploads. Subject to <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>.</li>
+        <li><strong>Mapbox:</strong> Used for map rendering. Subject to <a href="https://www.mapbox.com/legal/privacy" target="_blank" rel="noopener">Mapbox's Privacy Policy</a>.</li>
+      </ul>
 
-    <h3>Data Security</h3>
-    <p>
-      We take reasonable measures to protect the website, but no method of transmission over the Internet is 100% secure.
-    </p>
+      <h3>5. Data Sharing</h3>
+      <p>We do not sell, trade, or rent your personal information to third parties. Uploaded sounds and associated metadata (title, description, location, tags) are publicly visible on the platform.</p>
 
-    <h3>Changes to This Policy</h3>
-    <p>
-      This Privacy Policy may be updated from time to time.
-      Continued use of the website constitutes acceptance of the updated policy.
-    </p>
+      <h3>6. Your Rights</h3>
+      <ul>
+        <li>You can sign out at any time to remove your session from the browser.</li>
+        <li>You can clear your localStorage to remove all local preferences and history.</li>
+        <li>To request deletion of uploaded content, contact us at <a href="mailto:mapofsound@rukkit.net">mapofsound@rukkit.net</a>.</li>
+      </ul>
 
-    <!-- Terms of Service -->
-    <h2>Terms of Service</h2>
+      <h3>7. Children's Privacy</h3>
+      <p>MapOfSounds is not intended for children under 13. We do not knowingly collect information from children under 13.</p>
+    </div>
 
-    <p>
-      By accessing or using Rukkit, you agree to the following terms.
-      If you do not agree, please discontinue use of the website.
-    </p>
+    <div class="divider"></div>
 
-    <h3>Use of the Website</h3>
-    <ul>
-      <li>You agree to use this website for lawful purposes only.</li>
-      <li>You must not misuse the website or attempt to disrupt its functionality.</li>
-      <li>Automated abuse, scraping, or malicious activity is prohibited.</li>
-    </ul>
+    <!-- TERMS OF SERVICE -->
+    <div class="section">
+      <h2>📋 Terms of Service</h2>
+      <p>By using MapOfSounds, you agree to the following terms:</p>
 
-    <h3>Content</h3>
-    <p>
-      All content on this website is provided "as is" without warranties of any kind.
-      We are not responsible for user-generated or external content.
-    </p>
+      <h3>1. Acceptable Use</h3>
+      <ul>
+        <li>You may freely listen to any sound on the platform without an account.</li>
+        <li>You must sign in with Google to upload sounds or post comments.</li>
+        <li>You must not upload copyrighted content unless you have the right to share it.</li>
+        <li>You must not upload harmful, offensive, or illegal content.</li>
+        <li>You must not abuse the service (e.g., spamming uploads, automated scraping).</li>
+      </ul>
 
-    <h3>Limitation of Liability</h3>
-    <p>
-      Rukkit shall not be liable for any direct or indirect damages arising from the use or inability to use this website.
-    </p>
+      <h3>2. Content Ownership</h3>
+      <ul>
+        <li>You retain ownership of the sounds you upload.</li>
+        <li>By uploading, you grant MapOfSounds a non-exclusive license to host, display, and distribute your sound on the platform.</li>
+        <li>You can request removal of your content at any time by contacting us.</li>
+      </ul>
 
-    <h3>Changes to the Service</h3>
-    <p>
-      We reserve the right to modify or discontinue any part of the website at any time without notice.
-    </p>
+      <h3>3. Content Moderation</h3>
+      <p>We reserve the right to remove any content that violates these terms or that we deem inappropriate, without notice.</p>
 
-    <h3>Governing Law</h3>
-    <p>
-      These terms are governed by applicable laws, without regard to conflict of law principles.
-    </p>
+      <h3>4. Reuse</h3>
+      <p>You may not reuse any MapOfSounds content or code without permission.</p>
 
-        <h3>Reuse</h3>
-    <p>
-      We do not acept any reuse of ALL our rukkit.net contents and codes without permission.
-    </p>
+      <h3>5. Disclaimer</h3>
+      <ul>
+        <li>MapOfSounds is provided "as is" without any warranties.</li>
+        <li>We are not responsible for the accuracy of location data or user-submitted content.</li>
+        <li>We do not guarantee uninterrupted availability of the service.</li>
+      </ul>
 
-    <footer>
-      <p>
-        © 2026 Rukkit. All rights reserved.
-      </p>
-    </footer>
-  </main>
+      <h3>6. Changes</h3>
+      <p>We may update this Privacy Policy and Terms of Service at any time. Continued use of MapOfSounds after changes constitutes acceptance of the updated terms.</p>
+
+      <h3>7. Contact</h3>
+      <p>Questions or concerns? Reach out to <a href="mailto:mapofsound@rukkit.net">mapofsound@rukkit.net</a>.</p>
+    </div>
+
+    <div class="footer">
+      <p>🗺️ MapOfSounds — Made with ❤️ for sound lovers everywhere</p>
+    </div>
+  </div>
 </body>
 </html>
