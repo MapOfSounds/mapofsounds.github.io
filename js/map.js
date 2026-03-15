@@ -47,7 +47,25 @@ const SoundMap = {
     
     this.map.on('load', () => {
       this.loadSounds();
+      this._watchContainerSize();
     });
+  },
+
+  // ResizeObserver: auto-resize map whenever the container gains visible size
+  // (e.g. when navigating back to map tab after it was display:none)
+  _watchContainerSize() {
+    const container = document.getElementById('map');
+    if (!container || typeof ResizeObserver === 'undefined') return;
+
+    let lastWidth = 0;
+    const ro = new ResizeObserver((entries) => {
+      const w = entries[0]?.contentRect?.width || 0;
+      if (w > 0 && w !== lastWidth) {
+        lastWidth = w;
+        requestAnimationFrame(() => this.map && this.map.resize());
+      }
+    });
+    ro.observe(container);
   },
   
   _initGeocoder() {
